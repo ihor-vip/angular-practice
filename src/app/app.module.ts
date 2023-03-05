@@ -8,9 +8,13 @@ import { UsersComponent } from './components/users/users.component';
 import {RouterModule, Routes} from "@angular/router";
 import { PostsComponent } from './components/posts/posts.component';
 import { CommentsComponent } from './components/comments/comments.component';
+import { UserDetailsComponent } from './components/user-details/user-details.component';
 
 const appRoute: Routes = [
-  {path: 'users', component: UsersComponent},
+  {path: 'users', component: UsersComponent, children: [
+      {path: ':id', component: UserDetailsComponent},
+    ]
+  },
   {path: 'posts', component: PostsComponent},
   {path: 'comments', component: CommentsComponent},
 ]
@@ -21,7 +25,8 @@ const appRoute: Routes = [
     UserComponent,
     UsersComponent,
     PostsComponent,
-    CommentsComponent
+    CommentsComponent,
+    UserDetailsComponent
   ],
   imports: [
     BrowserModule,
