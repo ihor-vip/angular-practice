@@ -9,10 +9,11 @@ import {RouterModule, Routes} from "@angular/router";
 import { PostsComponent } from './components/posts/posts.component';
 import { CommentsComponent } from './components/comments/comments.component';
 import { UserDetailsComponent } from './components/user-details/user-details.component';
+import {UserResolveService} from "./services/user-resolve.service";
 
 const appRoute: Routes = [
   {path: 'users', component: UsersComponent, children: [
-      {path: ':id', component: UserDetailsComponent},
+      {path: ':id', component: UserDetailsComponent, resolve: {data: UserResolveService}},
     ]
   },
   {path: 'posts', component: PostsComponent},

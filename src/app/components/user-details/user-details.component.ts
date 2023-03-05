@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import {UserService} from "../../services/user.service";
 import {User} from "../../models/User";
@@ -11,10 +11,9 @@ import {User} from "../../models/User";
 export class UserDetailsComponent {
   user: User
 
-  constructor(private activatedRoute: ActivatedRoute, private userService: UserService) {
-    this.activatedRoute.params.subscribe(params => {
-      let id = +params['id']
-      userService.getUser(id).subscribe(value => this.user = value)
-    })
+  constructor(private activatedRoute: ActivatedRoute,
+              private userService: UserService) {
+
+    this.activatedRoute.data.subscribe(value => this.user = value['data'])
   }
 }
