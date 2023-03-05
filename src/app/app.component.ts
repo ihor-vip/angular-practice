@@ -1,20 +1,9 @@
-import {Component, OnInit} from '@angular/core';
-import {HttpClient} from "@angular/common/http";
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit{
-  users: any[] = [];
-
-  constructor(private http: HttpClient) {
-  }
-  ngOnInit(): void {
-    this.http.get<any[]>('https://jsonplaceholder.typicode.com/users').subscribe(value => {
-      console.log(value)
-      this.users = value
-    })
-  }
+export class AppComponent{
 }
