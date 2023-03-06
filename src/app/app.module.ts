@@ -11,14 +11,14 @@ import {CommentsComponent} from './components/comments/comments.component';
 import {UserDetailsComponent} from './components/user-details/user-details.component';
 import {HomeComponent} from './components/home/home.component';
 import {UserResolveService} from "./services";
+import {TestGuard} from "./guards/test.guard";
 
 const appRoute: Routes = [
   {
     path: '', component: HomeComponent, children: [
       {
-        path: 'users',
-        component: UsersComponent,
-        children: [
+        // path: 'users', component: UsersComponent, canActivate: [TestGuard], canDeactivate: [TestGuard], children: [
+        path: 'users', component: UsersComponent, canActivateChild: [TestGuard], canDeactivate: [TestGuard], children: [
           {
             path: ':id', component: UserDetailsComponent,
             resolve: {data: UserResolveService}
