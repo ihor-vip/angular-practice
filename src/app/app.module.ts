@@ -14,6 +14,7 @@ import {UserResolveService} from "./services";
 import {TestGuard} from "./guards/test.guard";
 
 const appRoute: Routes = [
+  {path: '', redirectTo: 'posts', pathMatch: 'full'},
   {
     path: '', component: HomeComponent, children: [
       {
