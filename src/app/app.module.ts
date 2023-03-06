@@ -13,7 +13,7 @@ import {HomeComponent} from './components/home/home.component';
 import {UserResolveService} from "./services";
 import {TestGuard} from "./guards/test.guard";
 import { FormsComponent } from './components/forms/forms.component';
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 const appRoute: Routes = [
   {path: '', redirectTo: 'posts', pathMatch: 'full'},
@@ -49,7 +49,8 @@ const appRoute: Routes = [
     BrowserModule,
     HttpClientModule,
     RouterModule.forRoot(appRoute),
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
