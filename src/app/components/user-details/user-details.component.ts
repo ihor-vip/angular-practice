@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
-import {UserService} from "../../services/user.service";
-import {User} from "../../models/User";
+import {UserService} from "../../services";
+import {IUser} from "../../interfaces";
 
 @Component({
   selector: 'app-user-details',
@@ -9,7 +9,7 @@ import {User} from "../../models/User";
   styleUrls: ['./user-details.component.css']
 })
 export class UserDetailsComponent {
-  user: User
+  user: IUser
 
   constructor(private activatedRoute: ActivatedRoute,
               private userService: UserService) {
