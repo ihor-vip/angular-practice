@@ -12,6 +12,8 @@ import {UserDetailsComponent} from './components/user-details/user-details.compo
 import {HomeComponent} from './components/home/home.component';
 import {UserResolveService} from "./services";
 import {TestGuard} from "./guards/test.guard";
+import { FormsComponent } from './components/forms/forms.component';
+import {FormsModule} from "@angular/forms";
 
 const appRoute: Routes = [
   {path: '', redirectTo: 'posts', pathMatch: 'full'},
@@ -40,12 +42,14 @@ const appRoute: Routes = [
     PostsComponent,
     CommentsComponent,
     UserDetailsComponent,
-    HomeComponent
+    HomeComponent,
+    FormsComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    RouterModule.forRoot(appRoute)
+    RouterModule.forRoot(appRoute),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
