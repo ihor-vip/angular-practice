@@ -13,3 +13,14 @@
 <!--  <button (click)="save2()" [disabled]="myForm.invalid">Save</button>-->
   <button (click)="save2()">Save</button>
 </form>
+
+<hr>
+
+
+<form [formGroup]="myForm2" (change)="showDetails()">
+  <select formControlName="userId">
+    <option *ngFor="let user of users" [value]="user.id">{{user.name}}</option>
+  </select>
+</form>
+
+<div *ngIf="userDetails">{{userDetails|json}}</div>
