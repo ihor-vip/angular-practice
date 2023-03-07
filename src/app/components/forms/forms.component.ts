@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {AbstractControl, FormControl, FormGroup, Validators} from "@angular/forms";
-import {UserService} from "../../services";
+import {DataTransferService, UserService} from "../../services";
 import {IUser} from "../../interfaces";
 
 @Component({
@@ -19,7 +19,7 @@ export class FormsComponent {
     users: IUser[];
     userDetails: IUser;
 
-    constructor(private userService: UserService) {
+    constructor(private userService: UserService, private transferService: DataTransferService) {
     }
 
     customValidator(control:AbstractControl):null | object {
@@ -55,5 +55,9 @@ export class FormsComponent {
   showDetails() {
     const id = this.myForm2.controls['userId'].value;
     this.userDetails = this.users[id -1]
+  }
+
+  setAge():void {
+    this.transferService.setAgeData(this.myForm.controls['age'].value)
   }
 }
