@@ -1,7 +1,9 @@
-import {NgModule} from '@angular/core';
+import {LOCALE_ID, NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 import {RouterModule, Routes} from "@angular/router";
 import {HttpClientModule} from "@angular/common/http";
+import {registerLocaleData} from '@angular/common'
+import localeUK from '@angular/common/locales/uk'
 
 import {AppComponent} from './app.component';
 import {UserComponent} from './components/user/user.component';
@@ -14,6 +16,9 @@ import {UserResolveService} from "./services";
 import {TestGuard} from "./guards/test.guard";
 import { FormsComponent } from './components/forms/forms.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { TestComponent } from './components/test/test.component';
+
+registerLocaleData(localeUK, 'uk')
 
 const appRoute: Routes = [
   {path: '', redirectTo: 'posts', pathMatch: 'full'},
@@ -43,7 +48,8 @@ const appRoute: Routes = [
     CommentsComponent,
     UserDetailsComponent,
     HomeComponent,
-    FormsComponent
+    FormsComponent,
+    TestComponent
   ],
   imports: [
     BrowserModule,
@@ -52,7 +58,9 @@ const appRoute: Routes = [
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    {provide: LOCALE_ID, useValue:'uk'}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
