@@ -4,6 +4,7 @@ import {BehaviorSubject} from "rxjs";
 @Injectable({
   providedIn: 'root'
 })
+
 export class DataTransferService {
   private ageData = new BehaviorSubject<number>(0)
   constructor() { }

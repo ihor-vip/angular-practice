@@ -10,6 +10,7 @@ import {IUser} from "../../interfaces";
 export class UsersComponent implements OnInit {
   age: number;
   users: IUser[] = [];
+  name:string
 
   constructor(private userService: UserService, private transferService: DataTransferService) {
   }
@@ -19,5 +20,9 @@ export class UsersComponent implements OnInit {
 
     // this.age = this.transferService.getAgeSnapShot()
     this.transferService.getAgeData().subscribe(value => this.age = value)
+  }
+
+  getName(name: string) {
+    this.name = name
   }
 }
