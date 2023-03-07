@@ -18,6 +18,7 @@ export class TestComponent implements OnInit{
   now = new Date()
   arr = [1,2,3,4,5]
 
+  color = 'green'
   constructor(private incrementPipe: IncrementPipe) {
   }
 

@@ -18,6 +18,7 @@ import { FormsComponent } from './components/forms/forms.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { TestComponent } from './components/test/test.component';
 import { IncrementPipe } from './pipes/increment.pipe';
+import { BoldAndColorDirective } from './directives/bold-and-color.directive';
 
 registerLocaleData(localeUK, 'uk')
 
@@ -51,7 +52,8 @@ const appRoute: Routes = [
     HomeComponent,
     FormsComponent,
     TestComponent,
-    IncrementPipe
+    IncrementPipe,
+    BoldAndColorDirective
   ],
   imports: [
     BrowserModule,

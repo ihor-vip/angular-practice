@@ -1,12 +1,12 @@
-<div>{{user|json}}</div>
+<div appBoldAndColor>{{user|json}}</div>
 
-<div>{{name|uppercase}}</div>
+<div appBoldAndColor="red">{{name|uppercase}}</div>
 
-<div>{{now|date:  'full': "": "uk"}}</div>
+<div [appBoldAndColor]='color'>{{now|date:  'full': "": "uk"}}</div>
 
 <div>{{arr|increment:5}}</div>
 
 <div>{{arr2}}</div>
 
-
+<!--directives-->
 <app-users></app-users>
