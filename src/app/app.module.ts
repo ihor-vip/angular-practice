@@ -17,6 +17,7 @@ import {TestGuard} from "./guards/test.guard";
 import { FormsComponent } from './components/forms/forms.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { TestComponent } from './components/test/test.component';
+import { IncrementPipe } from './pipes/increment.pipe';
 
 registerLocaleData(localeUK, 'uk')
 
@@ -49,7 +50,8 @@ const appRoute: Routes = [
     UserDetailsComponent,
     HomeComponent,
     FormsComponent,
-    TestComponent
+    TestComponent,
+    IncrementPipe
   ],
   imports: [
     BrowserModule,
@@ -59,7 +61,8 @@ const appRoute: Routes = [
     ReactiveFormsModule
   ],
   providers: [
-    {provide: LOCALE_ID, useValue:'uk'}
+    {provide: LOCALE_ID, useValue:'uk'},
+    IncrementPipe
   ],
   bootstrap: [AppComponent]
 })
