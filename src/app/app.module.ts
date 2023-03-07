@@ -12,14 +12,11 @@ import { BoldAndColorDirective } from './directives';
 import { HomeComponent } from './components/home/home.component';
 import {UserModule} from "./modules/user/user.module";
 import {UsersComponent} from "./modules/user/components/users/users.component";
+import {AppRoutingModule} from "./app-routing.module";
 
 registerLocaleData(localeUK, 'uk')
 
-const appRoute: Routes = [
-  {path: '', component: HomeComponent, children: [
-      {path: 'users', loadChildren: () => import('./modules/user/user.module').then(value => value.UserModule)}
-    ]}
-]
+
 
 @NgModule({
   declarations: [
@@ -31,7 +28,7 @@ const appRoute: Routes = [
   imports: [
     BrowserModule,
     HttpClientModule,
-    RouterModule.forRoot(appRoute),
+    AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
   ],
