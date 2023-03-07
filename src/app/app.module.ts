@@ -13,6 +13,7 @@ import { HomeComponent } from './components/home/home.component';
 import {UserModule} from "./modules/user/user.module";
 import {UsersComponent} from "./modules/user/components/users/users.component";
 import {AppRoutingModule} from "./app-routing.module";
+import { TestComponent } from './components/test/test.component';
 
 registerLocaleData(localeUK, 'uk')
 
@@ -23,7 +24,8 @@ registerLocaleData(localeUK, 'uk')
     AppComponent,
     IncrementPipe,
     BoldAndColorDirective,
-    HomeComponent
+    HomeComponent,
+    TestComponent
   ],
   imports: [
     BrowserModule,
