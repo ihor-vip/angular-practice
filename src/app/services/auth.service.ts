@@ -50,7 +50,7 @@ export class AuthService {
     localStorage.setItem(this.refreshTokenKey, refresh)
   }
 
-  private getAccessToken(): string | null {
+  getAccessToken(): string | null {
     return localStorage.getItem(this.accessTokenKey)
   }
 
