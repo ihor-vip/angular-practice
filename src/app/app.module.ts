@@ -14,6 +14,10 @@ import {UserModule} from "./modules/user/user.module";
 import {UsersComponent} from "./modules/user/components/users/users.component";
 import {AppRoutingModule} from "./app-routing.module";
 import { TestComponent } from './components/test/test.component';
+import { HeaderComponent } from './components/header/header.component';
+import { CarsComponent } from './components/cars/cars.component';
+import { CarComponent } from './components/cars/car/car.component';
+import { LoginComponent } from './components/login/login.component';
 
 registerLocaleData(localeUK, 'uk')
 
@@ -25,7 +29,11 @@ registerLocaleData(localeUK, 'uk')
     IncrementPipe,
     BoldAndColorDirective,
     HomeComponent,
-    TestComponent
+    TestComponent,
+    HeaderComponent,
+    CarsComponent,
+    CarComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
