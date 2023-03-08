@@ -9,6 +9,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { CarsComponent } from './components/cars/cars.component';
 import { CarComponent } from './components/cars/car/car.component';
 import { LoginComponent } from './components/login/login.component';
+import {ReactiveFormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { LoginComponent } from './components/login/login.component';
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

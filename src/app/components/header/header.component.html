@@ -1,1 +1,4 @@
-<p>header works!</p>
+<div class="header">
+  <div>{{email||'Anonymous'}}</div>
+  <button *ngIf="isAdmin" (click)="toAdmin()">Admin</button>
+</div>
