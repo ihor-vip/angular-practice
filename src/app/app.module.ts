@@ -6,8 +6,6 @@ import {AppComponent} from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import {AppRoutingModule} from "./app-routing.module";
 import { HeaderComponent } from './components/header/header.component';
-import { CarsComponent } from './components/cars/cars.component';
-import { CarComponent } from './components/cars/car/car.component';
 import { LoginComponent } from './components/login/login.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import {MainInterceptor} from "./main.interceptor";
@@ -18,8 +16,6 @@ import {MainInterceptor} from "./main.interceptor";
     AppComponent,
     HomeComponent,
     HeaderComponent,
-    CarsComponent,
-    CarComponent,
     LoginComponent
   ],
   imports: [

@@ -6,7 +6,7 @@ import {IUser} from "../interfaces";
   providedIn: 'root'
 })
 export class DataTransferService {
-  currentUserSubject = new BehaviorSubject<IUser>(null)
+  currentUserSubject = new BehaviorSubject<IUser|null>(null)
 
   constructor() { }
 }
