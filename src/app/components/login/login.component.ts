@@ -21,6 +21,8 @@ export class LoginComponent implements OnInit{
   }
 
   login():void {
-    this.authService.login(this.loginForm.getRawValue())
+    // this.authService.login(this.loginForm.getRawValue()).subscribe(() => {}, error => console.log(error))
+
+    this.authService.login(this.loginForm.getRawValue()).subscribe()
   }
 }
